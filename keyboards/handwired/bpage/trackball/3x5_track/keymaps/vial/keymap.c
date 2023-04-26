@@ -10,12 +10,12 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK] = LAYOUT_3x5(
-        KC_Q  ,KC_W  , KC_F  , KC_P  , KC_G  ,                     KC_J  , KC_L  , KC_U  , KC_Y  , KC_SCLN,
-        KC_A  , KC_R  , KC_S  , KC_T  , KC_D  ,                    KC_H  , KC_N  , KC_E  , KC_I  , KC_O,
-        KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                    KC_K  , KC_M  ,KC_COMM,KC_DOT , KC_SLSH,
-                                      RAISE,                       LOWER,
-                                      KC_TAB, KC_HOME,             KC_ENT,
-                                      KC_BSPC, KC_GRV,     KC_DEL, KC_LALT
+        _______  ,  _______, _______  , _______  , _______  ,                     _______  , _______  , _______  , _______  , _______,
+        _______  ,  _______, _______  , _______  , _______  ,                     _______  , _______  , _______  , _______  , _______,
+        _______  ,  _______, _______  , _______  , _______  ,                     _______  , _______  , _______  , _______  , _______,
+                                      _______,                       _______,
+                                      _______, _______,             _______,
+                                      _______, _______,     _______, _______
         ),
 
     [_LOWER] = LAYOUT_3x5(
@@ -51,3 +51,12 @@ void keyboard_post_init_user(void) {
     debug_mouse=false;
 #endif
 }
+
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [0] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN)  },
+    [1] =   { ENCODER_CCW_CW(RGB_HUD, RGB_HUI),           ENCODER_CCW_CW(RGB_SAD, RGB_SAI)  },
+    [2] =   { ENCODER_CCW_CW(RGB_VAD, RGB_VAI),           ENCODER_CCW_CW(RGB_SPD, RGB_SPI)  },
+    //                  Encoder 1                                     Encoder 2
+};
+#endif
