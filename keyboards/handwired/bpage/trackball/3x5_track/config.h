@@ -28,7 +28,6 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED_MASK 0U
 
 /* key matrix size */
-// Columns are doubled-up
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 5
 
@@ -43,56 +42,18 @@
 #define POINTING_DEVICE_RIGHT
 #define PMW33XX_CS_PIN GP10
 #define POINTING_DEVICE_TASK_THROTTLE_MS 1
-#define PMW33XX_LIFTOFF_DISTANCE 0x96
+#define PMW33XX_LIFTOFF_DISTANCE 0x19
 
 #define SPLIT_TRANSACTION_IDS_KB RPC_ID_KB_CONFIG_SYNC
 
-#define CHARYBDIS_MINIMUM_DEFAULT_DPI 1200
-#define CHARYBDIS_DEFAULT_DPI_CONFIG_STEP 200
-#define CHARYBDIS_MINIMUM_SNIPING_DPI 400
-#define CHARYBDIS_SNIPING_DPI_CONFIG_STEP 200
+// #define CHARYBDIS_MINIMUM_DEFAULT_DPI 1200
+// #define CHARYBDIS_DEFAULT_DPI_CONFIG_STEP 200
+// #define CHARYBDIS_MINIMUM_SNIPING_DPI 400
+// #define CHARYBDIS_SNIPING_DPI_CONFIG_STEP 200
 
 //// Rotary Encoder ////
 #define ENCODERS_PAD_A_RIGHT { GP8, GP9 }
 #define ENCODERS_PAD_B { GP8, GP9 }
-
-//// Sensor Notes ////
-//// Pi Pico pins ////
-// 3V3  -- Power (not 3v3_EN!)
-// GP21 -- CS pin
-// GP20 -- MISO pin
-// GP19 -- MOSI pin
-// GP18 -- SCK pin clock
-// GND  -- GND
-
-// WS2812 RGB LED strip input and number of LEDs
-//#ifdef RGBLIGHT_ENABLE
-//#define RGB_DI_PIN GP17
-//#define RGBLED_NUM 34
-////#define DRIVER_LED_TOTAL 34
-//#define RGBLED_SPLIT { 17, 17 }
-//#define STM32_SYSCLK KINETIS_SYSCLK_FREQUENCY
-//#define NOP_FUDGE 0.4
-//#endif
-
-//// OLED Pins and Driver
-// #ifdef OLED_ENABLE
-// #define I2C_DRIVER I2CD1
-// #define I2C1_SDA_PIN GP12
-// #define I2C1_SCL_PIN GP13
-// // OLED Options
-// #define SPLIT_OLED_ENABLE
-// #define SPLIT_WPM_ENABLE
-// #define OLED_DISPLAY_WIDTH 128
-// #define OLED_DISPLAY_HEIGHT 32
-// #define OLED_MATRIX_SIZE 512
-// #define OLED_RESET -1
-// #define OLED_DISPLAY_ADDRESS 0x3C
-// #define OLED_BRIGHTNESS 255
-// #define OLED_TIMEOUT 32000
-// #define OLED_FADE_OUT
-// #define OLED_FADE_OUT_INTERVAL 0
-// #endif
 
 // Misc settings
 // Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap
