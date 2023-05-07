@@ -60,3 +60,8 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     //                  Encoder 1                                     Encoder 2
 };
 #endif
+
+void pointing_device_init_user(void) {
+    set_auto_mouse_layer(2);
+    set_auto_mouse_enable(true);
+}
