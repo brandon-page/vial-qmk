@@ -61,7 +61,9 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 };
 #endif
 
+#if defined(POINTING_DEVICE_AUTO_MOUSE_ENABLE)
 void pointing_device_init_user(void) {
     set_auto_mouse_layer(2);
     set_auto_mouse_enable(true);
 }
+#endif
