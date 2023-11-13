@@ -1,0 +1,72 @@
+// Dactyl Manuform Hotswap
+#pragma once
+
+#include "config_common.h"
+// Basic Config
+
+#ifndef WYLD_QMK_FIRMWARE_CONFIG_H
+#define WYLD_QMK_FIRMWARE_CONFIG_H
+
+#endif // WYLD_QMK_FIRMWARE_CONFIG_H
+#define BOOTMAGIC_LITE_ROW 0        // TOP RIGHT KEY ON RIGHT SIDE, TOP LEFT KEY ON LEFT SIDE
+#define BOOTMAGIC_LITE_COLUMN 4
+
+#define USE_SERIAL
+#define MASTER_RIGHT
+
+// Using Serial instead of I2C
+#define SERIAL_USART_FULL_DUPLEX
+#define SERIAL_USART_TX_PIN GP0
+#define SERIAL_USART_RX_PIN GP1
+#define SERIAL_PIO_USE_PIO0
+#define SERIAL_USART_TIMEOUT     100  // USART driver timeout. default 100
+#define SERIAL_USART_SPEED 921600
+#define SERIAL_USART_PIN_SWAP
+
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED_MASK 0U
+
+/* key matrix size */
+#define MATRIX_ROWS 8
+#define MATRIX_COLS 5
+
+#define MATRIX_COL_PINS { GP3, GP4, GP5, GP6, GP7 }
+#define MATRIX_ROW_PINS { GP29, GP28, GP27, GP26 }
+
+#define DIODE_DIRECTION ROW2COL
+
+#define SPLIT_POINTING_ENABLE
+#define ROTATIONAL_TRANSFORM_ANGLE  -25
+#define POINTING_DEVICE_INVERT_Y
+#define POINTING_DEVICE_RIGHT
+#define PMW33XX_CS_PIN GP10
+#define POINTING_DEVICE_TASK_THROTTLE_MS 5
+#define PMW33XX_LIFTOFF_DISTANCE 0x10
+
+#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#define AUTO_MOUSE_TIME 500U
+#define AUTO_MOUSE_DELAY 500U
+// #define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
+
+#define SPLIT_TRANSACTION_IDS_KB RPC_ID_KB_CONFIG_SYNC
+
+// #define CHARYBDIS_MINIMUM_DEFAULT_DPI 1200
+// #define CHARYBDIS_DEFAULT_DPI_CONFIG_STEP 200
+// #define CHARYBDIS_MINIMUM_SNIPING_DPI 400
+// #define CHARYBDIS_SNIPING_DPI_CONFIG_STEP 200
+
+//// Rotary Encoder ////
+#define ENCODERS_PAD_A_RIGHT { GP8 }
+#define ENCODERS_PAD_B_RIGHT { GP9 }
+#define ENCODERS_PAD_A { GP9 }
+#define ENCODERS_PAD_B { GP8 }
+
+// Misc settings
+// Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap
+#define LOCKING_SUPPORT_ENABLE
+// Locking resynchronize hack
+#define LOCKING_RESYNC_ENABLE
+// Enables This makes it easier for fast typists to use dual-function keys
+#define PERMISSIVE_HOLD
+// End of Basic Config
