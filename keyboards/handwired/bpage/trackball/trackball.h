@@ -23,7 +23,7 @@
 
 enum charybdis_keycodes {
 #        ifdef VIA_ENABLE
-    POINTER_DEFAULT_DPI_FORWARD = USER00,
+    POINTER_DEFAULT_DPI_FORWARD = 0x7E40,
 #        else
     POINTER_DEFAULT_DPI_FORWARD = SAFE_RANGE,
 #        endif  // VIA_ENABLE

@@ -1,7 +1,6 @@
 // Dactyl Manuform Hotswap
 #pragma once
 
-#include "config_common.h"
 // Basic Config
 
 #ifndef WYLD_QMK_FIRMWARE_CONFIG_H

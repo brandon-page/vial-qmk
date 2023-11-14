@@ -1,7 +1,6 @@
 // Dactyl Manuform Hotswap
 #pragma once
 
-#include "config_common.h"
 // Basic Config
 
 //#define PRODUCT_ID 0x0002
@@ -16,6 +15,8 @@
 #define CHARYBDIS_MINIMUM_SNIPING_DPI 400
 #define CHARYBDIS_SNIPING_DPI_CONFIG_STEP 200
 #define CHARYBDIS_DRAGSCROLL_DPI 200
+#define CHARYBDIS_CONFIG_SYNC
+#define MOUSE_EXTENDED_REPORT
 
 // End of Basic Config
 

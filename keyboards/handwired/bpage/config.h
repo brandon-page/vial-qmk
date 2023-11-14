@@ -1,10 +1,5 @@
 #pragma once
 
-#include "config_common.h"
-
-
-//#define VENDOR_ID 0x9953 // keypad WYLD
-
 /* mouse config */
 #define MOUSEKEY_INTERVAL    20
 #define MOUSEKEY_DELAY       0
@@ -27,7 +22,7 @@
 
 //#define split_usb_detect
 //#define split_layer_state_enable
- 
+
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */

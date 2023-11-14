@@ -1,10 +1,21 @@
 {
   "customKeycodes": [
-    {
-        "name": "Scroll",
-        "title": "Drag Scroll",
-        "shortName": "DRGSCRL"
-    }
+    {"name": "DScroll",
+     "title": "Drag Scroll",
+     "shortName": "B_DRGSCRL"
+	},
+	{"name": "DScrollT",
+	 "title": "Drag Scroll Toggle",
+	 "shortname": "B_DRGTOG"
+	},
+	{"name": "DPI Up",
+	 "title": "Raise Default Trackball DPI",
+	 "shortName": "B_DPIUP"
+	},
+    {"name": "DPI Down",
+	 "title": "Lower Default Trackball DPI",
+	 "shortName": "B_DPIDWN"
+	}
   ],
   "matrix": {
     "rows": 8,
