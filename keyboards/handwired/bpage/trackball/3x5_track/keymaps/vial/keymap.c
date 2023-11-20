@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "3x5_track.h"
+#include "trackball.h"
 
 #define _BASE 0
 #define _LOWER 1
@@ -9,35 +10,44 @@
 #define LOWER MO(_LOWER)
 
 enum bpage_custom_vial_keycodes {
-    B_DRGSCRL = 0x7E40,
-    B_DRGTOG,
-    B_DPIUP,
-    B_DPIDWN,
+    DrgScrl = QK_KB,
+    DrgTog,
+    DpiUp,
+    DpiDwn,
+    AutoCorrect,
+    bptest,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
-		case B_DRGSCRL:
+		case DrgScrl:
             charybdis_set_pointer_dragscroll_enabled(record->event.pressed);
             break;
-        case B_DRGTOG:
+        case DrgTog:
             if (record->event.pressed) {
                 charybdis_set_pointer_dragscroll_enabled(!charybdis_get_pointer_dragscroll_enabled());
             }
             break;
-        case B_DPIUP:
+        case DpiUp:
             if (record->event.pressed) {
-                // Step backward if shifted, forward otherwise.
                 charybdis_cycle_pointer_default_dpi(true);
              }
             break;
-        case B_DPIDWN:
+        case DpiDwn:
             if (record->event.pressed) {
-                // Step forward if shifted, backward otherwise.
                 charybdis_cycle_pointer_default_dpi(false);
              }
             break;
+        case AutoCorrect:
+            process_record_kb(QK_AUTOCORRECT_TOGGLE, record);
+            break;
+        case bptest:
+            SEND_STRING("Hello world!");
+            break;
+        default:
+            return true;
 	}
+
     return true;
 }
 

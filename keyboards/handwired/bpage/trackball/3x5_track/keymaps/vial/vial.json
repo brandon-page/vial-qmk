@@ -1,20 +1,35 @@
 {
+  "name": "BPage Track 38",
   "customKeycodes": [
-    {"name": "DScroll",
-     "title": "Drag Scroll",
-     "shortName": "B_DRGSCRL"
+    {
+        "name": "Drag Scroll",
+        "title": "Drag Scroll",
+        "shortName": "DrgScrl"
 	},
-	{"name": "DScrollT",
-	 "title": "Drag Scroll Toggle",
-	 "shortname": "B_DRGTOG"
+	{
+        "name": "Drag Scroll Toggle",
+	    "title": "Drag Scroll Toggle",
+	    "shortName": "DrgTog"
 	},
-	{"name": "DPI Up",
-	 "title": "Raise Default Trackball DPI",
-	 "shortName": "B_DPIUP"
+	{
+        "name": "DPI Up",
+	    "title": "Raise Default Trackball DPI",
+	    "shortName": "DpiUp"
 	},
-    {"name": "DPI Down",
-	 "title": "Lower Default Trackball DPI",
-	 "shortName": "B_DPIDWN"
+    {
+        "name": "DPI Down",
+	    "title": "Lower Default Trackball DPI",
+	    "shortName": "DpiDwn"
+	},
+    {
+        "name": "Auto Correct Toggle",
+	    "title": "Toggle Auto Correct",
+	    "shortName": "AutoCorrect"
+	},
+    {
+        "name": "Test",
+	    "title": "Test Custom Keycode",
+	    "shortName": "bptest"
 	}
   ],
   "matrix": {
